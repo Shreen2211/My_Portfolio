@@ -4,6 +4,7 @@ import 'package:my_portfolio/Widget/drawer.dart';
 import 'package:my_portfolio/Widget/main_container.dart';
 import 'package:my_portfolio/constants/photos_name.dart';
 import '../Widget/nav_bar.dart';
+import '../Widget/skills_desktop.dart';
 import '../constants/colors.dart';
 
 class HomePage extends StatefulWidget {
@@ -49,19 +50,23 @@ class _HomePageState extends State<HomePage> {
                       const AboutMe(),
                     ],
                   ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      const AboutMe(),
-                      Image.asset(
-                        PhotosName.myPhoto,
-                        width: screenWidth / 2.5,
-                      ),
-                    ],
+                  child: SizedBox(
+                    height: 450,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        const AboutMe(),
+                        Image.asset(
+                          PhotosName.myPhoto,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
+              const SizedBox(height: 100,),
               //Skill
+              const SkillsDesktop(),
             ],
           ),
         );
