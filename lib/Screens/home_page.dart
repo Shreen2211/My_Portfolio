@@ -4,6 +4,7 @@ import 'package:my_portfolio/Widget/drawer.dart';
 import 'package:my_portfolio/Widget/main_container.dart';
 import 'package:my_portfolio/constants/photos_name.dart';
 import '../Widget/nav_bar.dart';
+import '../Widget/skills_Mobile.dart';
 import '../Widget/skills_desktop.dart';
 import '../constants/colors.dart';
 
@@ -39,7 +40,7 @@ class _HomePageState extends State<HomePage> {
               //Main
               MainContainer(
                 content: Visibility(
-                  visible: constraints.maxWidth >= 650,
+                  visible: constraints.maxWidth >= 750,
                   replacement: Column(
                     spacing: 30,
                     children: [
@@ -66,7 +67,8 @@ class _HomePageState extends State<HomePage> {
               ),
               const SizedBox(height: 100,),
               //Skill
-              const SkillsDesktop(),
+              screenWidth>=600?const SkillsDesktop():const SkillsMobile(),
+
             ],
           ),
         );
