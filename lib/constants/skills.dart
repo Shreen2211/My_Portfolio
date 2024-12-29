@@ -19,7 +19,6 @@ import 'package:flutter/material.dart';
   },
 ];
 
-
 const List<Map> skillsTools = [
   {
     "Name": "Dart",
@@ -50,3 +49,4 @@ const List<Map> skillsTools = [
     "icon": Icon(Icons.desktop_mac),
   },
 ];
+
