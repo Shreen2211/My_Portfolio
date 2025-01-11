@@ -1,53 +1,25 @@
 import 'package:flutter/material.dart';
-
-import '../constants/colors.dart';
+import 'package:my_portfolio/Widget/about_document.dart';
+import 'about_section.dart';
 
 class AboutMe extends StatelessWidget {
   const AboutMe({super.key});
 
+
   @override
   Widget build(BuildContext context) {
-    return  Padding(
-      padding: const EdgeInsets.only(left: 15.0),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-          const Text(
-            "Hi,\nI'm Shreen Ahmed\nFlutter Developer",
-            style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-                color: CustomColor.whitePrimary,
-                height: 1.5),
-          ),
+    final screenSize = MediaQuery.of(context).size;
+    final screenWidth = screenSize.width;
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 60),
+      child: Row(
+        children: [
+          AboutSection(width: (screenWidth - 90) / 2,),
           const SizedBox(
-            height: 40,
+            width: 60,
           ),
-          const Text(
-            "A passionate Flutter developer dedicated to creating seamless and user-friendly applications for multiple platforms.",
-            style: TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.bold,
-                color: CustomColor.textFieldBg,
-            ),
-          ),
-          const SizedBox(
-            height: 40,
-          ),
-          SizedBox(
-            width: 200,
-            height: 70,
-            child: ElevatedButton( style: ButtonStyle(
-              backgroundColor: WidgetStateProperty.all(CustomColor.yellowPrimary),
-              elevation: WidgetStateProperty.all(10),
-              shape: WidgetStateProperty.all(
-                RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30),
-                ),
-              ),),
-                onPressed: () {},
-                child: const Text('Get in Touch',style: TextStyle(fontSize: 20),)),
+          const Expanded(
+            child: AboutDocument(),
           ),
         ],
       ),

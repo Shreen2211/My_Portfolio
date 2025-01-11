@@ -1,52 +1,23 @@
 import 'package:flutter/material.dart';
 
- const List<Map> skillsName = [
+ List<Map> skillsName = [
   {
     "Name": "Android Dev",
-    "icon": Icon(Icons.android),
-  },
-  {
+    "icon": Image.network('https://pngimg.com/uploads/android_logo/android_logo_PNG27.png',width: 35,height: 35,),
+  }, const {
     "Name": "IOS Dev",
-    "icon": Icon(Icons.ios_share_outlined),
-  },
-  {
-    "Name": "Web Dev",
-    "icon": Icon(Icons.web),
-  },
-  {
+    "icon": Icon(Icons.apple,size: 35,),
+  }, const {
     "Name": "Desktop Dev",
-    "icon": Icon(Icons.desktop_mac),
+    "icon": Icon(Icons.desktop_mac_sharp,size: 35,),
+  },  {
+    "Name": "Web Dev",
+    "icon": Image.network('https://www.freeiconspng.com/uploads/website-icon-8.png',width: 35,height: 35),
   },
+
 ];
 
-const List<Map> skillsTools = [
-  {
-    "Name": "Dart",
-    "icon": Icon(Icons.android),
-  },
-  {
-    "Name": "Flutter",
-    "icon": Icon(Icons.ios_share_outlined),
-  },
-  {
-    "Name": "HTML",
-    "icon": Icon(Icons.web),
-  },
-  {
-    "Name": "CSS",
-    "icon": Icon(Icons.desktop_mac),
-  },{
-    "Name": "OOP",
-    "icon": Icon(Icons.desktop_mac),
-  },{
-    "Name": "OOP",
-    "icon": Icon(Icons.desktop_mac),
-  },{
-    "Name": "OOP",
-    "icon": Icon(Icons.desktop_mac),
-  },{
-    "Name": "OOP",
-    "icon": Icon(Icons.desktop_mac),
-  },
-];
+const List skillsTools = ["Dart","Flutter","Provider","Cubit""Shared_Preferences ","Firebase","Api","GitHub","MVVM",];
+
+
 

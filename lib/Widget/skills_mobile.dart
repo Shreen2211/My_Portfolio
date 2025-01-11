@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/Widget/platform.dart';
 import 'package:my_portfolio/Widget/skill_tools.dart';
+import '../Style/text_style.dart';
 import '../constants/skills.dart';
 
 class SkillsMobile extends StatelessWidget {
@@ -12,10 +13,7 @@ class SkillsMobile extends StatelessWidget {
       margin: const EdgeInsets.all(30),
       child: Column(
         children: [
-          const Text(
-            'What i can do ..?',
-            style: TextStyle(fontSize: 34, fontWeight: FontWeight.bold),
-          ),
+          const TextCustom(text: 'What i can do ..?',),
           for(int i=0;i<skillsName.length;i++)
             Platform(title: Text(skillsName[i]['Name']),icon: skillsName[i]['icon'],),
           const SizedBox(height: 20,),

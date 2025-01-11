@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:my_portfolio/Widget/about_me_mobile.dart';
 import 'package:my_portfolio/Widget/drawer.dart';
 import 'package:my_portfolio/Widget/main_container.dart';
-import 'package:my_portfolio/constants/photos_name.dart';
-import '../Widget/life.dart';
+import '../Widget/about_me.dart';
 import '../Widget/nav_bar.dart';
 import '../Widget/skills_mobile.dart';
 import '../Widget/skills_desktop.dart';
-import '../constants/colors.dart';
 import 'dart:js' as js;
+import '../constants/colors.dart';
+import '../constants/photos_name.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -19,7 +19,6 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
-
 
   @override
   Widget build(BuildContext context) {
@@ -48,9 +47,7 @@ class _HomePageState extends State<HomePage> {
                 height: 100,
               ),
               //About Me
-              screenWidth >= 650 ? const myLife(): const AboutMeMobile(),
-
-
+              screenWidth >= 750 ? const AboutMe() : const AboutMeMobile(),
               const SizedBox(
                 height: 100,
               ),

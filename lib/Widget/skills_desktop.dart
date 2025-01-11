@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/Widget/platform.dart';
 import 'package:my_portfolio/Widget/skill_tools.dart';
+import '../Style/text_style.dart';
 import '../constants/colors.dart';
 import '../constants/skills.dart';
 
@@ -15,10 +16,7 @@ class SkillsDesktop extends StatelessWidget {
       child: Column(
         spacing: 30,
         children: [
-          const Text(
-            'What i can do ..?',
-            style: TextStyle(fontSize: 34, fontWeight: FontWeight.bold),
-          ),
+          const TextCustom(text: 'What i can do ..?',),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [

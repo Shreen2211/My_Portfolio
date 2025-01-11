@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../constants/photos_name.dart';
-import 'about_me.dart';
+import 'intro_text.dart';
 
 class MainContainer extends StatelessWidget {
   const MainContainer({super.key,this.visible,this.width });
@@ -16,21 +16,21 @@ class MainContainer extends StatelessWidget {
         spacing: 30,
         children: [
           Image.asset(
-            PhotosName.myPhoto,
+            PhotosName.flutterIcon,
             width: width,
           ),
-          const AboutMe(),
+          const IntoText(),
         ],
       ),
       child: SizedBox(
-        height: 450,
+        height: 500,
         child: Row(
           children: [
-            const Expanded(child: AboutMe()),
+            const Expanded(child: IntoText()),
             SizedBox(
               width: width,
               child: Image.asset(
-                PhotosName.myPhoto,
+                PhotosName.flutterIcon,
               ),
             ),
           ],
